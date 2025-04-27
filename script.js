@@ -1,5 +1,6 @@
 let btn1 = document.querySelector("#btn1");
 let btn2 = document.querySelector("#btn2");
+
 let copyCode = document.querySelector(".code-div");
 
 let rgb1 = "#00f";
@@ -16,14 +17,12 @@ const hexValues = function () {
 
 const handlebtn1 = () => {
   rgb1 = hexValues();
-  btn1.innerText = rgb1;
   document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgba2})`;
   copyCode.innerHTML = `background-image: linear-gradient(to right,${rgb1}, ${rgba2})`;
 };
 
 const handlebtn2 = () => {
   rgba2 = hexValues();
-  btn2.innerText = rgba2;
   document.body.style.backgroundImage = `linear-gradient(to right, ${rgba2}, ${rgb1})`;
   copyCode.innerHTML = `background-image: linear-gradient(to right,${rgba2}, ${rgb1})`;
 };
